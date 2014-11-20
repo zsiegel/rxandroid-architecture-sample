@@ -1,0 +1,10 @@
+apply plugin: 'java'
+
+dependencies {
+    compile rootProject.ext.libraries.dagger
+    compile rootProject.ext.libraries.daggerCompiler
+    compile rootProject.ext.libraries.rxandroid
+
+    testCompile rootProject.ext.testLibraries.dexmakerMockito
+    testCompile rootProject.ext.testLibraries.mockito
+}

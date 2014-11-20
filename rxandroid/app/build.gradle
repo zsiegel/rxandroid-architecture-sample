@@ -41,6 +41,10 @@ android {
 }
 
 dependencies {
+    compile project(':core')
+    compile project(':api')
+    compile project(':persistence')
+
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile rootProject.ext.libraries.appCompat
     compile rootProject.ext.libraries.androidSupport
