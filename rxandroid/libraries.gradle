@@ -1,0 +1,37 @@
+ext {
+
+    //Android
+    buildToolsVersion = '21.1.1'
+    daggerVersion = '1.2.2'
+    butterknifeVersion = '6.0.0'
+    androidSupportVersion = '21.0.+'
+    rxandroidVersion = '0.22.0'
+    appCompatVersion = '21.0.0'
+    recyclerViewVersion = '+'
+
+    //Java
+    rxjavaVersion = '1.0.0-rc.9'
+
+    //Testing
+    junitVersion = '4.11'
+    dexmakerVersion = '1.1'
+    mockitoVersion = '1.9.5'
+
+    libraries = [
+            appCompat         : "com.android.support:appcompat-v7:${appCompatVersion}",
+            butterknife       : "com.jakewharton:butterknife:${butterknifeVersion}",
+            dagger            : "com.squareup.dagger:dagger:${daggerVersion}",
+            daggerCompiler    : "com.squareup.dagger:dagger-compiler:${daggerVersion}",
+            rxjava            : "io.reactivex:rxjava:${rxjavaVersion}",
+            rxandroid         : "io.reactivex:rxandroid:${rxandroidVersion}",
+            androidSupport    : "com.android.support:support-v13:${androidSupportVersion}",
+    ]
+
+    testLibraries = [
+            dexmaker               : "com.google.dexmaker:dexmaker:${dexmakerVersion}",
+            dexmakerMockito        : "com.google.dexmaker:dexmaker-mockito:${dexmakerVersion}",
+            mockito                : "org.mockito:mockito-core:${mockitoVersion}",
+            junit                  : "junit:junit:${junitVersion}",
+    ]
+
+}
