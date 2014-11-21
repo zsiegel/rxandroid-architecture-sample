@@ -16,4 +16,4 @@ At the application level we combine these modules and services and create a sing
 
 In this example the `UserService` that we use in our application is composed of both a `UserApiService` and a `UserPersistenceService`. The `UserService` is responsible for composing and serving the data based on the `DataRequest`. 
 
-A `DataRequest` at the basic level allows the user to specify their source (local(persistnce), remote(api), or refresh(persistence and api)) and an ID to get a specific resource. This can be later extended for more querying and filtering as needed.
+A `DataRequest` at the basic level allows the user to specify their source (local(persistence), remote(api), or refresh(persistence and api)) and an ID to get a specific resource. This can be later extended for more querying and filtering as needed.
