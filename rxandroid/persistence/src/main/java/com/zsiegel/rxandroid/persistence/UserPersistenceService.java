@@ -25,6 +25,7 @@ public class UserPersistenceService {
 
     public UserPersistenceService() {
         super();
+        userCache = new ConcurrentHashMap<>();
     }
 
     public Observable<List<User>> get(final long id) {
@@ -68,14 +69,6 @@ public class UserPersistenceService {
     }
 
     public void cacheUser(Long id, User user) {
-        if (userCache == null) {
-            synchronized (this) {
-                if (userCache == null) {
-                    userCache = new ConcurrentHashMap<>();
-                }
-            }
-        }
-
         userCache.put(id, user);
     }
 }

@@ -2,6 +2,7 @@ package com.zsiegel.rxandroid.test;
 
 import android.test.AndroidTestCase;
 
+import com.zsiegel.rxandroid.MockUserService;
 import com.zsiegel.rxandroid.api.UserApiService;
 import com.zsiegel.rxandroid.model.User;
 import com.zsiegel.rxandroid.persistence.UserPersistenceService;
@@ -28,6 +29,10 @@ public class UserServiceTest extends AndroidTestCase {
 
     public void testRefresh() {
         DataRequest refreshRequest = new DataRequest(DataRequest.Source.REFRESH, -1);
+
+        //Cache some users
+        persistenceService.save(MockUserService.getMockData(UserPersistenceService.MAX_LOCAL_USERS));
+
         List<List<User>> users = userService.get(refreshRequest).toList().toBlocking().single();
         assertEquals(users.size(), 2);
         assertEquals(users.get(0).size(), UserPersistenceService.MAX_LOCAL_USERS);
@@ -43,6 +48,10 @@ public class UserServiceTest extends AndroidTestCase {
 
     public void testGetUsersLocal() {
         DataRequest localRequest = new DataRequest(DataRequest.Source.LOCAL, -1);
+
+        //Cache some users
+        persistenceService.save(MockUserService.getMockData(UserPersistenceService.MAX_LOCAL_USERS));
+
         List<List<User>> users = userService.get(localRequest).toList().toBlocking().single();
         assertEquals(users.size(), 1);
         assertEquals(users.get(0).size(), UserPersistenceService.MAX_LOCAL_USERS);
