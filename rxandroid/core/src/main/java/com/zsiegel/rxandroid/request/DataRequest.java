@@ -14,6 +14,12 @@ public class DataRequest {
     public long id = -1;
     public Source source;
 
+    /**
+     * A request for data
+     *
+     * @param source the source of the data
+     * @param id     the id of the data, if not specified all data will be returned
+     */
     public DataRequest(Source source, long id) {
         super();
         this.source = source;
