@@ -10,7 +10,7 @@ ext {
     recyclerViewVersion = '+'
 
     //Java
-    rxjavaVersion = '1.0.0-rc.9'
+    rxjavaVersion = '1.0.0'
 
     //Testing
     junitVersion = '4.11'
