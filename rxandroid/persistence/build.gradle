@@ -20,10 +20,8 @@ android {
 }
 
 dependencies {
+    compile project(':core')
     compile rootProject.ext.libraries.dagger
     compile rootProject.ext.libraries.daggerCompiler
     compile rootProject.ext.libraries.rxandroid
-
-    androidTestCompile rootProject.ext.testLibraries.dexmakerMockito
-    androidTestCompile rootProject.ext.testLibraries.mockito
 }

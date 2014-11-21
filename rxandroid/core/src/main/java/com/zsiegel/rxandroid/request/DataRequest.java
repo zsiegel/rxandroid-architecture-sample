@@ -5,7 +5,7 @@ package com.zsiegel.rxandroid.request;
  */
 public class DataRequest {
 
-    enum Source {
+    public enum Source {
         REMOTE, //Fetch the data from the remote source
         LOCAL, //Fetch the data from the local source
         REFRESH //Fetch the local data first, then update the local data from the remote source

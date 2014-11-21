@@ -52,7 +52,4 @@ dependencies {
     compile rootProject.ext.libraries.daggerCompiler
     compile rootProject.ext.libraries.butterknife
     compile rootProject.ext.libraries.rxandroid
-
-    androidTestCompile rootProject.ext.testLibraries.dexmakerMockito
-    androidTestCompile rootProject.ext.testLibraries.mockito
 }

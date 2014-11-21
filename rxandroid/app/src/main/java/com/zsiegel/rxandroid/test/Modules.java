@@ -1,4 +1,4 @@
-package com.zsiegel.rxandroid.sample;
+package com.zsiegel.rxandroid.test;
 
 import com.zsiegel.rxandroid.api.ApiModule;
 import com.zsiegel.rxandroid.persistence.PersistenceModule;

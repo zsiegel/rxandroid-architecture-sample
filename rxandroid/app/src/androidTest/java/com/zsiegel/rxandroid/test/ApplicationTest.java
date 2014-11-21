@@ -1,4 +1,4 @@
-package com.zsiegel.rxandroid.sample;
+package com.zsiegel.rxandroid.test;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
